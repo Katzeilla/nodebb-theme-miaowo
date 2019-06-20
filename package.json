@@ -1,10 +1,23 @@
 {
-  "name": "nodebb-theme-quickstart",
-  "version": "0.0.0",
-  "description": "Enter a description here",
+  "name": "nodebb-theme-mint",
+  "version": "0.0.1",
+  "description": "A simple nodebb theme for miaowo.org",
   "main": "theme.less",
+  "author": {
+        "name": "Katzeilla",
+	"email": "hello@katzeilla.org"
+  },
+  "repository": {
+	    "type": "git",
+	        "url": "https://github.com/katzeilla/nodebb-theme-mint"
+  },
+  "bugs": {
+	    "url": "https://github.com/katzeilla/nodebb-theme-mint/issues"
+  },
   "keywords": [
-
+	"mint",
+	"green",
+	"miaowo"
   ],
-  "license": "MIT"
+  "license": "AGPLv3"
 }
