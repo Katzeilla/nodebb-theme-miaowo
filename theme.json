@@ -1,6 +1,6 @@
 {
-    "id": "nodebb-theme-quickstart",
-    "name": "My Theme Name",
-    "description": "Enter a description here",
-    "url": "https://github.com/nodebb/nodebb-theme-quickstart"
+    "id": "nodebb-theme-mint",
+    "name": "Mint",
+    "description": "A simple nodebb theme for miaowo.org",
+    "url": "https://github.com/katzeilla/mint"
 }
