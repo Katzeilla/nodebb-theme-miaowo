@@ -1,3 +1,5 @@
 {
-    "composer.enter_title_here": "在这里输入标题......"
+    "composer.title_placeholder": "在这里输入标题......",
+    "thread_tools.title": "工具",
+    "composer.submit": "发布"
 }

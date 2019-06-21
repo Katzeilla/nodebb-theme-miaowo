@@ -1,5 +1,5 @@
 {
-    "home": "主页",
+    "home": "广场",
     "search": "搜索",
     "403.title": "禁止访问",
     "403.message": "您似乎没有访问此页面的权限。",
@@ -90,7 +90,7 @@
     "uploads": "上传",
     "allowed-file-types": "允许的文件类型有 %1",
     "unsaved-changes": "有些更改还未保存，你确定要离开吗？",
-    "reconnecting-message": "与喵窝的连接断开，我们正在尝试重连，这应该不需要太长时间。",
+    "reconnecting-message": "与喵窝的连接暂时断开了，我们正在尝试重连，这应该不需要太长时间。",
     "play": "播放",
     "cookies.message": "这里需要 Cookies 才能运作",
     "cookies.accept": "知道了！",
