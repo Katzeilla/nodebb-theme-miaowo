@@ -1,4 +1,3 @@
-<h3>[[global:upvoters]] <small>({upvoteCount})</small></h3>
 <!-- BEGIN upvoters -->
 <a href="{config.relative_path}/user/{upvoters.userslug}">
 <!-- IF upvoters.picture -->
