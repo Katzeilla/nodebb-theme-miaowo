@@ -1,8 +1,13 @@
 <div class="clearfix post-header">
 	<div class="icon pull-left">
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
-			{buildAvatar(posts.user, "46", true, "", "user/picture")}
+			<!-- IF posts.user.picture -->
+			<img component="user/picture" data-uid="{posts.user.uid}" src="{posts.user.picture}" align="left" itemprop="image" />
+			<!-- ELSE -->
+			<div component="user/picture" data-uid="{posts.user.uid}" class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
+			<!-- ENDIF posts.user.picture -->
 			<i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
+
 		</a>
 	</div>
 
@@ -31,9 +36,9 @@
 			<span>
 				<!-- IF posts.user.custom_profile_info.length -->
 				&#124;
-				{{{each posts.user.custom_profile_info}}}
+				<!-- BEGIN posts.user.custom_profile_info -->
 				{posts.user.custom_profile_info.content}
-				{{{end}}}
+				<!-- END posts.user.custom_profile_info -->
 				<!-- ENDIF posts.user.custom_profile_info.length -->
 			</span>
 		</span>
@@ -61,16 +66,16 @@
 
 		<!-- IF !reputation:disabled -->
 		<span class="votes">
-			<a component="post/upvote" href="#">
-				
-				<i component="post/like" style="color: #F44336;" class="fa fa-heart liked <!-- IF !posts.upvoted --> hidden <!-- ENDIF !posts.upvoted -->"></i>
-				
-				
-				<i component="post/liked" class="fa fa-heart-o like <!-- IF posts.upvoted --> hidden <!-- ENDIF posts.upvoted -->"></i>
-				
-			</a>
-			<span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
 
+			<span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
+                        <a component="post/upvote" href="#">
+
+                                <i component="post/like" style="color: #F44336;" class="fa fa-heart liked <!-- IF !posts.upvoted --> hidden <!-- ENDIF !posts.upvoted -->"></i>
+
+
+                                <i component="post/liked" class="fa fa-heart-o like <!-- IF posts.upvoted --> hidden <!-- ENDIF posts.upvoted -->"></i>
+
+                        </a>
 			<!-- IF !downvote:disabled -->
 			<a component="post/downvote" href="#" class="<!-- IF posts.downvoted -->downvoted<!-- ENDIF posts.downvoted -->">
 				<i class="fa fa-chevron-down"></i>
@@ -85,9 +90,13 @@
 	<!-- IF !hideReplies -->
 	<a component="post/reply-count" href="#" class="threaded-replies no-select <!-- IF !posts.replies.count -->hidden<!-- ENDIF !posts.replies.count -->">
 		<span component="post/reply-count/avatars" class="avatars <!-- IF posts.replies.hasMore -->hasMore<!-- ENDIF posts.replies.hasMore -->">
-			{{{each posts.replies.users}}}
-			{buildAvatar(posts.replies.users, "xs", true, "")}
-			{{{end}}}
+			<!-- BEGIN posts.replies.users -->
+			<!-- IF posts.replies.users.picture -->
+			<span><img component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="avatar" src="{posts.replies.users.picture}"  itemprop="image" /></span>
+			<!-- ELSE -->
+			<div component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="user-icon" style="background-color: {posts.replies.users.icon:bgColor};">{posts.replies.users.icon:text}</div>
+			<!-- ENDIF posts.replies.users.picture -->
+			<!-- END posts.replies.users -->
 		</span>
 
 		<span class="replies-count" component="post/reply-count/text" data-replies="{posts.replies.count}">{posts.replies.text}</span>
