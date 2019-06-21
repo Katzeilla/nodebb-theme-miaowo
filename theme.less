@@ -1,8 +1,9 @@
 @import "../nodebb-theme-persona/theme";
 
+
 .topic .pagination-block .progress-bar {
-	background-color: #7DC880;
-}
+		background-color: #7DC880;
+	}
 
 .btn {
 	border: 0px;
@@ -13,5 +14,51 @@
 
 	&:focus, &:hover {
 	               background-color: darken(#4CAF50, 10%);
+	}
+}
+
+.btn-info {
+	background-color: #7DC880;
+	&:focus, &:hover {
+	               background-color: darken(#7DC880, 10%);
+	}
+}
+.open > .dropdown-toggle.btn-info {
+	background-color: #7DC880;
+}
+
+
+a {
+	color: #35b198;
+	&:focus, &:hover {
+	               color: darken(#35b198, 10%);
+	}
+}
+
+.taskbar .navbar-nav li.taskbar-composer a, .taskbar .navbar-nav li.taskbar-composer a:active, .taskbar .navbar-nav li.taskbar-composer a:focus, .taskbar .navbar-nav li.taskbar-composer a:hover {
+		background-color: #26a69a;
+}
+
+
+.category > ul > li .avatar .select:hover .fa-check {
+	border: 1px solid #4CAF50;
+	color: #4CAF50;
+}
+
+.unread-count::after {
+	border: 0px;
+	background-color: #4CAF50;
+}
+.post-tools {
+        a {
+		color: #35b198;
+	}
+}
+
+.content, .preview{
+	p {
+		a {
+			color: #35b198;
+		}
 	}
 }
