@@ -62,19 +62,18 @@
 		<!-- IF !reputation:disabled -->
 		<span class="votes">
 			<a component="post/upvote" href="#">
-				
-				<i component="post/like" style="color: #F44336;" class="fa fa-heart liked <!-- IF !posts.upvoted --> hidden <!-- ENDIF !posts.upvoted -->"></i>
-				
-				
-				<i component="post/liked" class="fa fa-heart-o like <!-- IF posts.upvoted --> hidden <!-- ENDIF posts.upvoted -->"></i>
-				
-			</a>
+
+<i component="post/like" style="color: #F44336;" class="fa fa-heart liked <!-- IF !posts.upvoted --> hidden <!-- ENDIF !posts.upvoted -->"></i>
+
+<i component="post/liked" class="fa fa-heart-o like <!-- IF posts.upvoted --> hidden <!-- ENDIF posts.upvoted -->"></i>
+
+</a>
 			<span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
 
 			<!-- IF !downvote:disabled -->
 			<a component="post/downvote" href="#" class="<!-- IF posts.downvoted -->downvoted<!-- ENDIF posts.downvoted -->">
-				<i class="fa fa-chevron-down"></i>
-			</a>
+<i class="fa fa-chevron-down"></i>
+</a>
 			<!-- ENDIF !downvote:disabled -->
 		</span>
 		<!-- ENDIF !reputation:disabled -->
