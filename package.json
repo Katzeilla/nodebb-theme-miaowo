@@ -1,7 +1,7 @@
 {
   "name": "nodebb-theme-mint",
   "version": "0.0.1",
-  "description": "A simple nodebb theme for miaowo.org",
+  "description": "Mint is a responsive and opinionated theme for NodeBB based on nodebb-tmeme-persona.",
   "main": "theme.less",
   "author": {
         "name": "Katzeilla",
